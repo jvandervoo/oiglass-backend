@@ -5,8 +5,6 @@ const cors = require("cors");
 
 router.post("/submit", cors(), async (req, response) => {
 	dotenv.config();
-	//console.log(req.body);
-	console.log("Posting...");
 	try {
 		res = await axios({
 			method: "POST",
