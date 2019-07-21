@@ -1,9 +1,11 @@
 const express = require("express");
-const app = express();
-app.use(express.json());
-
-//Import middleware
+const cors = require("cors");
 const authRoute = require("./routes/auth");
+const app = express();
+
+app.use(express.json());
+app.use(cors());
+
 //Route middleware
 app.use("/api/createsend/", authRoute);
 

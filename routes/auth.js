@@ -23,6 +23,7 @@ router.post("/submit", cors(), async (req, response) => {
 				ConsentToTrack: "Yes"
 			}
 		});
+
 		response.send("Successfully posted!");
 	} catch (err) {
 		response.send("Error: " + err);
