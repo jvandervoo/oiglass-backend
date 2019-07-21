@@ -1,10 +1,11 @@
 const express = require("express");
 const app = express();
+app.use(express.json());
+
 //Import middleware
 const authRoute = require("./routes/auth");
-
 //Route middleware
-app.use("/api/dinnerin/", authRoute);
+app.use("/api/createsend/", authRoute);
 
 app.get("/", (req, res) => res.send("Hello World!!!!"));
 
