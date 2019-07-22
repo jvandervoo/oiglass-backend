@@ -5,10 +5,11 @@ const cors = require("cors");
 
 router.post("/submit", cors(), async (req, response) => {
 	dotenv.config();
+	const listId = req.body.list;
 	try {
 		res = await axios({
 			method: "POST",
-			url: "https://api.createsend.com/api/v3.2/subscribers/24a6b377ff1c5822cc73c7350d0bfae5.json",
+			url: `https://api.createsend.com/api/v3.2/subscribers/${listId}.json`,
 			headers: {
 				Accept: "application/json",
 				"Content-Type": "application/json",
